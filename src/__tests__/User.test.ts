@@ -17,4 +17,13 @@ describe('User', () => {
 
 		expect(response.status).toBe(201)
 	})
+
+	it('Should not be able to create a user when the email already exists', async () => {
+		const response = await request(app).post('/users').send({
+			name: 'Default User',
+			email: 'user@example.com',
+		})
+
+		expect(response.status).toBe(400)
+	})
 })
