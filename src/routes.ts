@@ -14,6 +14,7 @@ routes.get('/', (req, res) => res.json({ message: 'Hello World! 🌐' }))
 routes.post('/users', userController.create)
 
 //? Surveys
+routes.get('/surveys', surveyController.show)
 routes.post('/surveys', surveyController.create)
 
 export default routes
