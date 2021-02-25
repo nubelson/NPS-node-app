@@ -17,4 +17,15 @@ describe('Survey', () => {
 
 		expect(response.body.description).toBe('This is a new survey')
 	})
+
+	it('Should return all surveys', async () => {
+		await request(app).post('/surveys').send({
+			title: 'New Survey',
+			description: 'This is another survey',
+		})
+
+		const response = await request(app).get('/surveys')
+
+		expect(response.body.length).toBe(2)
+	})
 })
