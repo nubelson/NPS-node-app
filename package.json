@@ -10,7 +10,7 @@
 		"posttest": "rm ./src/database/database.test.sqlite"
 	},
 	"dependencies": {
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"nodemailer": "^6.4.18",
 		"reflect-metadata": "^0.1.13",
 		"sqlite3": "^5.0.2",
